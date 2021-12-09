@@ -27,23 +27,25 @@ import java.util.Date;
 
 @Controller
 public class IdexController {
-@Autowired
+    @Autowired
     UserInfoService userInfoService;
-@Autowired
-IdexDataService idexDataService;
+    @Autowired
+    IdexDataService idexDataService;
+
     /**
-     *初始化頁面
+     * 初始化頁面
+     *
      * @return
      */
-    @GetMapping(value = {"/","/index.html"})
-    public String indexPage(Model module){
-module.addAttribute("index",idexDataService.getIndexData());
+    @GetMapping(value = {"/", "/index.html"})
+    public String indexPage(Model module) {
+        module.addAttribute("index", idexDataService.getIndexData());
 
         return "index";
     }
 
     @GetMapping(value = "/LoginPage")
-    public String loginPage(){
+    public String loginPage() {
 
         return "LoginPage";
     }
@@ -51,64 +53,66 @@ module.addAttribute("index",idexDataService.getIndexData());
 
     /**
      * 登出
+     *
      * @param httpSession
      * @return
      */
     @GetMapping(value = "/singOut")
-    public String singOut(HttpSession httpSession){
-if(httpSession ==null){
+    public String singOut(HttpSession httpSession) {
+        if (httpSession == null) {
 
-}else {
-    httpSession.removeAttribute("LoginUser");
+        } else {
+            httpSession.removeAttribute("LoginUser");
 
-}
+        }
         return "LoginPage";
     }
+
     /**
      * 去燈入主頁
+     *
      * @return
      */
     @PostMapping("/login")
-    public String goMain(LoginUser loginUser, HttpSession httpSession, Model module){
-        if (StringUtils.hasLength(loginUser.getUserName()) && StringUtils.hasLength(loginUser.getPassword())){
+    public String goMain(LoginUser loginUser, HttpSession httpSession, Model module) {
+        if (StringUtils.hasLength(loginUser.getUserName()) && StringUtils.hasLength(loginUser.getPassword())) {
             UserInfo oneuserInfo = userInfoService.getOneuserInfo(loginUser.getUserName(), loginUser.getPassword());
-            if(oneuserInfo!=null){
+            if (oneuserInfo != null) {
                 //success
-                httpSession.setAttribute("LoginUser",oneuserInfo);
+                httpSession.setAttribute("LoginUser", oneuserInfo);
                 SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                httpSession.setAttribute("loginTime",sdFormat.format(new Date()));
+                httpSession.setAttribute("loginTime", sdFormat.format(new Date()));
                 return "redirect:/main.html";
-            }else {
-                module.addAttribute("msg","帳號密碼錯誤");
+            } else {
+                module.addAttribute("msg", "帳號密碼錯誤");
                 return "LoginPage";
             }
 
-        }else {
-            module.addAttribute("msg","帳號密碼請輸入值");
+        } else {
+            module.addAttribute("msg", "帳號密碼請輸入值");
             return "LoginPage";
         }
 
 
     }
+
     /**
      * 進入燈入主頁
      *
      * @return
      */
     @GetMapping("/main.html")
-    public String mainPage(HttpSession httpSession){
+    public String mainPage(HttpSession httpSession) {
         //filter
         Object loginUser = httpSession.getAttribute("LoginUser");
-        if(loginUser==null){
+        if (loginUser == null) {
             return "LoginPage";
-        }else {
+        } else {
             return "main";
         }
         //filter
 
     }
-  @GetMapping("/tt")
-    public String gg(){
-        return "manageAdd";
-    }
+
+
 }

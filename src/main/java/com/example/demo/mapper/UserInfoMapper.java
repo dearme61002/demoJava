@@ -29,12 +29,14 @@ public interface UserInfoMapper {
 
     @Select("select * from UserInfo where onlyID=#{onlyID}")
     public UserInfo getOneUserInfoByOnlyID(Integer onlyID);
-@Select("select count(1) from UserInfo where Account=#{Account}")
-public Integer getMatnUserInfoByAccount(@Param(value = "Account") String Account);
-@Update("UPDATE UserInfo set Name=#{Name},Email=#{Email},Fixdate=#{Fixdate},UserLevel=#{UserLevel} where onlyID=#{onlyID}")
-public Integer updateOneUserInfoByOnlyID(@Param(value = "Name") String Name, @Param("Email") String Email, @Param("Fixdate")Date Fixdate,@Param(value = "onlyID") Integer onlyID,@Param(value = "UserLevel")String UserLevel);
+
+    @Select("select count(1) from UserInfo where Account=#{Account}")
+    public Integer getMatnUserInfoByAccount(@Param(value = "Account") String Account);
+
+    @Update("UPDATE UserInfo set Name=#{Name},Email=#{Email},Fixdate=#{Fixdate},UserLevel=#{UserLevel} where onlyID=#{onlyID}")
+    public Integer updateOneUserInfoByOnlyID(@Param(value = "Name") String Name, @Param("Email") String Email, @Param("Fixdate") Date Fixdate, @Param(value = "onlyID") Integer onlyID, @Param(value = "UserLevel") String UserLevel);
 
 
-@Delete("delete from UserInfo where ID=#{ID}")
-    public Integer deleteUsweInfoByID(@Param(value = "ID")String ID);
+    @Delete("delete from UserInfo where ID=#{ID}")
+    public Integer deleteUsweInfoByID(@Param(value = "ID") String ID);
 }
