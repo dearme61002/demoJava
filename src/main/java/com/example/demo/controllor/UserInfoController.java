@@ -5,10 +5,12 @@ import com.example.demo.mod.Category;
 import com.example.demo.mod.UserInfo;
 import com.example.demo.service.AccountingNoteSerivce;
 import com.example.demo.service.CategoryService;
+import com.example.demo.service.Check;
 import com.example.demo.service.UserInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +32,13 @@ public class UserInfoController {
     @Autowired
     CategoryService categoryService;
 
+    @Value("${maxCountNumberAccount}")
+    Integer maxCountNumberAccount;
+    @Value("${maxCountNumberName}")
+    Integer maxCountNumberName;
+    @Value("${maxCountNumberEmail}")
+    Integer maxCountNumberEmail;
+
     @GetMapping("/UserInfo/goAdd")
     public String goUserInfoAdd() {
         return "NumberAdd";
@@ -39,6 +48,41 @@ public class UserInfoController {
     public String UserInfoAdd(@RequestParam(value = "Account") String Account, @RequestParam(value = "Name") String Name, @RequestParam(value = "Email") String Email, @RequestParam(value = "UserLevel") String UserLevel, RedirectAttributes redirectAttributes) {
         Integer integer;
         UserInfo userInfo = new UserInfo();
+
+
+        //check
+        if (Check.isNullOrIsEmpty(Account)) {
+            redirectAttributes.addFlashAttribute("UserMsg", "帳號不能為空");
+            return "redirect:/UserInfo/goAdd";
+        }
+        if(Check.isOvermaxCountNumberAccount(Account.trim().length())){
+            redirectAttributes.addFlashAttribute("UserMsg", "帳號字數超過"+maxCountNumberAccount+"字");
+            return "redirect:/UserInfo/goAdd";
+        }
+        if (Check.isNullOrIsEmpty(Name)) {
+            redirectAttributes.addFlashAttribute("UserMsg", "姓名不能為空");
+            return "redirect:/UserInfo/goAdd";
+        }
+        if(Check.isOvermaxCountNumberName(Name.trim().length())){
+            redirectAttributes.addFlashAttribute("UserMsg", "帳號字數超過"+maxCountNumberName+"字");
+            return "redirect:/UserInfo/goAdd";
+        }
+        if (Check.isNullOrIsEmpty(Email)) {
+            redirectAttributes.addFlashAttribute("UserMsg", "Email不能為空");
+            return "redirect:/UserInfo/goAdd";
+        }
+        if(Check.isOvermaxCountNumberEmail(Email.trim().length())){
+            redirectAttributes.addFlashAttribute("UserMsg", "帳號字數超過"+maxCountNumberEmail+"字");
+            return "redirect:/UserInfo/goAdd";
+        }
+
+        if (!Check.isGoodEmail(Email)) {
+            redirectAttributes.addFlashAttribute("UserMsg", "Email格式不對");
+            return "redirect:/UserInfo/goAdd";
+        }
+
+        //check
+
         //檢查使用者重複
         Integer matnUserInfoByAccount = userInfoService.getMatnUserInfoByAccount(Account);
         if (matnUserInfoByAccount > 0) {
@@ -80,6 +124,38 @@ public class UserInfoController {
 
     @PostMapping("/User/Update")
     public String updateOneUserInfo(@RequestParam("onlyID") Integer onlyID, @RequestParam("Name") String Name, @RequestParam("Email") String Email, @RequestParam("UserLevel") String UserLevel, RedirectAttributes redirectAttributes) {
+
+
+        //check
+
+        if (Check.isNullOrIsEmpty(Name)) {
+            redirectAttributes.addFlashAttribute("UserMsg", "姓名不能為空");
+            return "redirect:/User/Act?UserInfoOnlyID=" + onlyID;
+        }
+        if(Check.isOvermaxCountNumberName(Name.trim().length())){
+            redirectAttributes.addFlashAttribute("UserMsg", "帳號字數超過"+maxCountNumberName+"字");
+            return "redirect:/User/Act?UserInfoOnlyID=" + onlyID;
+        }
+        if (Check.isNullOrIsEmpty(Email)) {
+            redirectAttributes.addFlashAttribute("UserMsg", "Email不能為空");
+            return "redirect:/User/Act?UserInfoOnlyID=" + onlyID;
+        }
+        if(Check.isOvermaxCountNumberEmail(Email.trim().length())){
+            redirectAttributes.addFlashAttribute("UserMsg", "帳號字數超過"+maxCountNumberEmail+"字");
+            return "redirect:/User/Act?UserInfoOnlyID=" + onlyID;
+        }
+
+        if (!Check.isGoodEmail(Email)) {
+            redirectAttributes.addFlashAttribute("UserMsg", "Email格式不對");
+            return "redirect:/User/Act?UserInfoOnlyID=" + onlyID;
+        }
+
+        //check
+
+
+
+
+
         Integer integer = userInfoService.updateOneUserInfoByOnlyID(Name, Email, UserLevel, onlyID);
 
         if (integer > 0) {
