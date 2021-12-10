@@ -5,7 +5,9 @@ import com.example.demo.mod.Category;
 import com.example.demo.mod.UserInfo;
 import com.example.demo.service.AccountingNoteSerivce;
 import com.example.demo.service.CategoryService;
+import com.example.demo.service.Check;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,8 @@ public class manageController {
     CategoryService categoryService;
     @Autowired
     AccountingNoteSerivce accountingNoteSerivce;
+    @Value("${maxAmount}")
+    String maxAmount;
 
     @GetMapping("/Manage/Add")
     public String goManageAdd(Model module, HttpSession httpSession) {
@@ -33,86 +37,147 @@ public class manageController {
     }
 
 
-
-
-
     @PostMapping("/Manage/Insert")
-    public String ManageInsert(@RequestParam(value = "UserID") String UserID, @RequestParam(value = "ActType") String ActType, @RequestParam(value = "Category") String Category, @RequestParam(value = "Caption") String Caption, @RequestParam(value = "Amount") int Amount, @RequestParam(value = "Body") String Body,RedirectAttributes redirectAttributes) {
-        int i=0;
-  try {
-       i = accountingNoteSerivce.insertAccountingNote(UserID, Caption, Amount, ActType, Body, Category);
-  }catch (Exception e){
-      redirectAttributes.addFlashAttribute("insertManage","嚴重錯誤");
-      return "redirect:/Manage/Insert";
-  }
-  if(i>0){
-      redirectAttributes.addFlashAttribute("insertManage" ,"加入成功");
+    public String ManageInsert(@RequestParam(value = "UserID") String UserID, @RequestParam(value = "ActType") String ActType, @RequestParam(value = "Category") String Category, @RequestParam(value = "Caption") String Caption, @RequestParam(value = "Amount") String Amount, @RequestParam(value = "Body") String Body, RedirectAttributes redirectAttributes) {
+        int i = 0;
+        //check
+        if (Check.isNullOrIsEmpty(Caption)) {
+            redirectAttributes.addFlashAttribute("insertManage", "標題不能為空");
+            return "redirect:/Manage/Add";
+        }
 
-  }else {
-      redirectAttributes.addFlashAttribute("insertManage","加入失敗");
-  }
+        if (Check.isNullOrIsEmpty(Amount)) {
+            redirectAttributes.addFlashAttribute("insertManage", "金額不能為空");
+            return "redirect:/Manage/Add";
+        }
+
+        if (!Check.isOnlyHaveMath(Amount)) {
+            redirectAttributes.addFlashAttribute("insertManage", "只能輸入數字");
+            return "redirect:/Manage/Add";
+        }
+        int AmountToInt = Integer.parseInt(Amount);
+
+
+        if (Check.isZero(AmountToInt)) {
+            redirectAttributes.addFlashAttribute("insertManage", "不能為零");
+            return "redirect:/Manage/Add";
+        }
+        if (Check.isOverMaxMathAmountValue(AmountToInt)) {
+            redirectAttributes.addFlashAttribute("insertManage", "不能大於" + maxAmount);
+            return "redirect:/Manage/Add";
+        }
+
+
+        //check
+
+        try {
+            i = accountingNoteSerivce.insertAccountingNote(UserID, Caption, AmountToInt, ActType, Body, Category);
+        } catch (Exception e) {
+            redirectAttributes.addFlashAttribute("insertManage", "嚴重錯誤");
+            return "redirect:/Manage/Add";
+        }
+        if (i > 0) {
+            redirectAttributes.addFlashAttribute("insertManage", "加入成功");
+
+        } else {
+            redirectAttributes.addFlashAttribute("insertManage", "加入失敗");
+            return "redirect:/Manage/Add";
+        }
         Integer oneMaxAccountingNoteID = accountingNoteSerivce.getOneMaxAccountingNoteID();
-        return "redirect:/manage/manageAct?AccountingNotesID="+oneMaxAccountingNoteID;
+        return "redirect:/manage/manageAct?AccountingNotesID=" + oneMaxAccountingNoteID;
 
 
     }
+
     @GetMapping("/manage/manageAct")
-        public String gomanageAct(@RequestParam("AccountingNotesID")String AccountingNotesID,Model model,HttpSession httpSession){
+    public String gomanageAct(@RequestParam("AccountingNotesID") String AccountingNotesID, Model model, HttpSession httpSession) {
         AccountingNote oneAccountingNoteByID = accountingNoteSerivce.getOneAccountingNoteByID(AccountingNotesID);
         //分類
         UserInfo loginUser = (UserInfo) httpSession.getAttribute("LoginUser");
         List<Category> allCategoryByUserID = categoryService.getAllCategoryByUserID(loginUser.getID());
-        model.addAttribute("goManageAdd",allCategoryByUserID);
+        model.addAttribute("goManageAdd", allCategoryByUserID);
         //分類
-        model.addAttribute("oneAccountingNoteByID",oneAccountingNoteByID);//getID
+        model.addAttribute("oneAccountingNoteByID", oneAccountingNoteByID);//getID
         //給資料
         AccountingNote oneAccountingNoteByID1 = accountingNoteSerivce.getOneAccountingNoteByID(AccountingNotesID);
-        model.addAttribute("oneAccountingNoteByID1",oneAccountingNoteByID1);
+        model.addAttribute("oneAccountingNoteByID1", oneAccountingNoteByID1);
         return "manageAct";
     }
-    @PostMapping("/manage/Update")
-    public  String updateOneAccountingNote(@RequestParam("ID") String ID,@RequestParam("ActType") String ActType,@RequestParam("Category") String Category,@RequestParam("Caption") String Caption,@RequestParam("Amount") Integer Amount,@RequestParam("Body") String Body, RedirectAttributes redirectAttributes){
-        Integer integer = accountingNoteSerivce.updateOneAccountingNoteID(Caption, Amount, ActType, Body, Category, ID);
-        if(integer>0){
-            redirectAttributes.addFlashAttribute("insertManage","更改成功");
 
-        }else{
-            redirectAttributes.addFlashAttribute("UpdateCategory","沒有更改喔");
+    @PostMapping("/manage/Update")
+    public String updateOneAccountingNote(@RequestParam("ID") String ID, @RequestParam("ActType") String ActType, @RequestParam("Category") String Category, @RequestParam("Caption") String Caption, @RequestParam("Amount") String Amount, @RequestParam("Body") String Body, RedirectAttributes redirectAttributes) {
+
+        //check
+        if (Check.isNullOrIsEmpty(Caption)) {
+            redirectAttributes.addFlashAttribute("insertManage", "標題不能為空");
+            return "redirect:/manage/manageAct?AccountingNotesID=" + ID;
         }
 
-        return "redirect:/manage/manageAct?AccountingNotesID="+ID;
-    }
+        if (Check.isNullOrIsEmpty(Amount.trim())) {
+            redirectAttributes.addFlashAttribute("insertManage", "金額不能為空");
+            return "redirect:/manage/manageAct?AccountingNotesID=" + ID;
+        }
 
+        if (!Check.isOnlyHaveMath(Amount.trim())) {
+            redirectAttributes.addFlashAttribute("insertManage", "只能輸入數字");
+            return "redirect:/manage/manageAct?AccountingNotesID=" + ID;
+        }
+
+        int AmountToInt = Integer.parseInt(Amount);
+
+        if (Check.isZero(AmountToInt)) {
+            redirectAttributes.addFlashAttribute("insertManage", "不能為零");
+            return "redirect:/manage/manageAct?AccountingNotesID=" + ID;
+        }
+        if (Check.isOverMaxMathAmountValue(AmountToInt)) {
+            redirectAttributes.addFlashAttribute("insertManage", "不能大於" + maxAmount);
+            return "redirect:/manage/manageAct?AccountingNotesID=" + ID;
+        }
+
+
+        //check
+
+
+
+
+
+        Integer integer = accountingNoteSerivce.updateOneAccountingNoteID(Caption, AmountToInt, ActType, Body, Category, ID);
+        if (integer > 0) {
+            redirectAttributes.addFlashAttribute("insertManage", "更改成功");
+
+        } else {
+            redirectAttributes.addFlashAttribute("insertManage", "沒有更改喔");
+        }
+
+        return "redirect:/manage/manageAct?AccountingNotesID=" + ID;
+    }
 
 
     //
     @PostMapping("/manage/Delete")
-    public String deleteOneCategory(@RequestParam(value = "delete",required = false) String[] ID, RedirectAttributes redirectAttributes){
+    public String deleteOneCategory(@RequestParam(value = "delete", required = false) String[] ID, RedirectAttributes redirectAttributes) {
 
 
+        if (ID == null) {
 
-
-        if(ID==null){
-
-            redirectAttributes.addFlashAttribute("AccountingNoteDelete","沒有選擇刪除的選項，無法刪除");
+            redirectAttributes.addFlashAttribute("AccountingNoteDelete", "沒有選擇刪除的選項，無法刪除");
             return "redirect:/manage";
         }
         try {
 
-            for (String id:
+            for (String id :
                     ID) {
                 //刪除AccountingNote關聯資料
-             accountingNoteSerivce.deleteAccountingNoteByID(id);
+                accountingNoteSerivce.deleteAccountingNoteByID(id);
 
             }
-        }catch (Exception exception){
-            redirectAttributes.addFlashAttribute("AccountingNoteDelete","嚴重錯誤，無法刪除");
+        } catch (Exception exception) {
+            redirectAttributes.addFlashAttribute("AccountingNoteDelete", "嚴重錯誤，無法刪除");
 
         }
 
 
-        redirectAttributes.addFlashAttribute("AccountingNoteDelete","刪除成功");
-
+        redirectAttributes.addFlashAttribute("AccountingNoteDelete", "刪除成功");
 
 
         return "redirect:/manage";

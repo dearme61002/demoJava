@@ -21,7 +21,7 @@
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 輸出文件的位置，以每一天做切割-->
-            <fileNamePattern>${LOG_PATH}/logback.%d{yyyy-MM-dd}錯誤訊息.html</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/warn/logback.%d{yyyy-MM-dd}錯誤訊息.html</fileNamePattern>
             <!--保留30天的歷史紀錄 -->
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -36,7 +36,8 @@
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <!--Log的格式-->
             <layout class="ch.qos.logback.classic.html.HTMLLayout">
-                <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+<!--                <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+                <pattern>%-5level%d{yyyy-mm-dd HH:mm:ss.SSS}%c%M%L%thread%m</pattern>
             </layout>
 
         </encoder>
@@ -45,7 +46,7 @@
     <appender name="fileMyData" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 輸出文件的位置，以每一天做切割-->
-            <fileNamePattern>${LOG_PATH}/logback.%d{yyyy-MM-dd}會員訊息.html</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/number/logback.%d{yyyy-MM-dd}會員訊息.html</fileNamePattern>
             <!--保留30天的歷史紀錄 -->
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -54,7 +55,8 @@
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <!--Log的格式-->
             <layout class="ch.qos.logback.classic.html.HTMLLayout">
-                <pattern>%d{HH:mm:ss.SSS}%contextName%thread%-5level%logger{36}-%msg%n</pattern>
+<!--                <pattern>%d{HH:mm:ss.SSS}%contextName%thread%-5level%logger{36}-%msg%n</pattern>-->
+                <pattern>%-5level%d{yyyy-mm-dd HH:mm:ss.SSS}%c%M%L%thread%m</pattern>
             </layout>
 
         </encoder>

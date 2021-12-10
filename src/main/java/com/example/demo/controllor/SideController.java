@@ -34,6 +34,7 @@ public class SideController {
         UserInfo loginUser = (UserInfo) httpSession.getAttribute("LoginUser");
 
         //Amount
+        try{
         Integer sumINAmount = accountingNoteSerivce.getSumINAmount(loginUser.getID());
         Integer sumOutAmount = accountingNoteSerivce.getSumOutAmount(loginUser.getID());
 
@@ -48,7 +49,9 @@ public class SideController {
         SumTotalAmount=sumINAmount-sumOutAmount;
         model.addAttribute("SumTotalAmount",SumTotalAmount);
         //Amount
-
+    }catch (Exception e){
+            model.addAttribute("SumTotalAmount","總金額超過"+Math.floor(Integer.MAX_VALUE)+"或小於"+Math.floor(Integer.MIN_VALUE) );
+        }
         List<AccountingNote> oneAccountingNoteByUserID = accountingNoteSerivce.getOneAccountingNoteByUserID(loginUser.getID());
         double pageSize = 10;
         int currPage =1;
