@@ -22,7 +22,7 @@
             <!--            裡面-->
             <div class="m-4">
                 <h1>目前頁面</h1>
-                <a href="common.html" class="mr-2">後台管理</a><span>->>></span><span class="ml-2">個人資訊</span>
+                <a href="/main.html" class="mr-2">後台管理</a><span>->>></span><span class="ml-2">個人資訊</span>
 
                 <div class="mt-4">
                     <h1 th:text="${UpateOneUser}"></h1>
@@ -31,9 +31,9 @@
                             <input type="hidden" name="id" th:value="${session.LoginUser.getID()}">
                             <tr>
                                 <td>帳號</td>
-                                <td><input th:value="${session.LoginUser.getAccount()}" name="account" style="width: 700px" type="text">
+                                <td><input disabled="disabled" th:value="${session.LoginUser.getAccount()}"  style="width: 700px" type="text">
                                 </td>
-
+                                <input type="hidden" name="account" th:value="${session.LoginUser.getAccount()}">
                             </tr>
                             <tr>
                                 <td>姓名</td>

@@ -64,7 +64,7 @@ public class UserInfoController {
             return "redirect:/UserInfo/goAdd";
         }
         if(Check.isOvermaxCountNumberName(Name.trim().length())){
-            redirectAttributes.addFlashAttribute("UserMsg", "帳號字數超過"+maxCountNumberName+"字");
+            redirectAttributes.addFlashAttribute("UserMsg", "姓名字數超過"+maxCountNumberName+"字");
             return "redirect:/UserInfo/goAdd";
         }
         if (Check.isNullOrIsEmpty(Email)) {
@@ -72,7 +72,7 @@ public class UserInfoController {
             return "redirect:/UserInfo/goAdd";
         }
         if(Check.isOvermaxCountNumberEmail(Email.trim().length())){
-            redirectAttributes.addFlashAttribute("UserMsg", "帳號字數超過"+maxCountNumberEmail+"字");
+            redirectAttributes.addFlashAttribute("UserMsg", "Email字數超過"+maxCountNumberEmail+"字");
             return "redirect:/UserInfo/goAdd";
         }
 
