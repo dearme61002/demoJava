@@ -22,11 +22,10 @@
             <!--            裡面-->
             <div class="m-4">
                 <h1>流水帳管理</h1>
-                <a href="/manage" class="mr-2">流水帳紀錄</a><span>->>></span><span class="ml-2">流水帳管理
-                 <form method="post" action="/manage/Delete">
+                <a href="/manage" class="mr-2">流水帳紀錄</a><span>->>></span><span class="ml-2">流水帳管理</span>
+                 <form method="post" action="/manage/Delete" onsubmit="return disp_confirm()">
                 <div class="m-4">
-                    <span><input type="button" class="btn-facebook" onclick="javascript:location.href='/Manage/Add'"
-                                 value="Add"></span>
+                    <span><input type="button" class="btn-facebook" onclick="javascript:location.href='/Manage/Add'" value="Add"></span>
                     <span><input type="submit" value="Del" class="btn-google"></span>
                     <span><span style="font-size: large" class="ml-5 mr-5">小計:</span>[[${SumTotalAmount}]]</span>
                 </div>
@@ -58,6 +57,7 @@
 
                         </tr>
                     </table>
+                </div>
                 </form>
                 <!--math-->
                     <div>
@@ -100,7 +100,15 @@
 <link th:replace="common :: commonModel">
 
 <link th:replace="common :: commonJs">
-
+<script type="text/javascript">
+    function disp_confirm() {
+        if (confirm("確認要送出本表單嗎？") == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
 
 </body>
 

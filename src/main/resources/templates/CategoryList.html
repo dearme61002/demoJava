@@ -23,7 +23,7 @@
             <div class="m-4">
                 <h1>流水帳分類管理</h1>
                 <a href="/manage" class="mr-2">流水帳紀錄</a><span>->>></span><span class="ml-2">流水帳分類管理</span>
-                <form method="post" action="/Category/Delete">
+                <form method="post" action="/Category/Delete" onsubmit="return disp_confirm()">
                     <div class="m-4">
                     <span><input type="button" class="btn-facebook" onclick="javascript:location.href='/CategoryAdd'"
                                  value="Add"></span>

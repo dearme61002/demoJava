@@ -1,0 +1,1348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:14:31 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:14:32 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2021-15-18 18:15:05.458</td>
+<td class="Logger">com.zaxxer.hikari.pool.HikariPool</td>
+<td class="MethodOfCaller">throwPoolInitializationException</td>
+<td class="LineOfCaller">594</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-1</td>
+<td class="Message">HikariPool-1 - Exception during pool initialization.</td>
+</tr>
+<tr><td class="Exception" colspan="6">com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:fb7b9f69-f20a-471a-99ee-c04a31124e6b
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:283)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:129)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:37)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:5560)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4289)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7417)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3488)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2978)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2628)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2471)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1470)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:915)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy3/jdk.proxy3.$Proxy68.getMaxTime(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.service.IdexDataService.getIndexData(IdexDataService.java:15)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.controllor.IdexController.indexPage(IdexController.java:42)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.Thread.run(Thread.java:833)
+</td></tr>
+<tr class="error odd">
+<td class="Level">ERROR</td>
+<td class="Date">2021-15-18 18:15:05.636</td>
+<td class="Logger">org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]</td>
+<td class="MethodOfCaller">log</td>
+<td class="LineOfCaller">175</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-1</td>
+<td class="Message">Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:fb7b9f69-f20a-471a-99ee-c04a31124e6b
+### The error may exist in com/example/demo/mapper/IndexDataMapper.java (best guess)
+### The error may involve com.example.demo.mapper.IndexDataMapper.getMaxTime
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:fb7b9f69-f20a-471a-99ee-c04a31124e6b] with root cause</td>
+</tr>
+<tr><td class="Exception" colspan="6">com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:fb7b9f69-f20a-471a-99ee-c04a31124e6b
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:283)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:129)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:37)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:5560)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4289)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7417)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3488)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2978)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2628)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2471)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1470)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:915)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy3/jdk.proxy3.$Proxy68.getMaxTime(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.service.IdexDataService.getIndexData(IdexDataService.java:15)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.controllor.IdexController.indexPage(IdexController.java:42)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.Thread.run(Thread.java:833)
+</td></tr>
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2021-15-18 18:15:07.178</td>
+<td class="Logger">org.apache.catalina.util.SessionIdGeneratorBase</td>
+<td class="MethodOfCaller">log</td>
+<td class="LineOfCaller">173</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-1</td>
+<td class="Message">Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [265] milliseconds.</td>
+</tr>
+
+<tr class="error odd">
+<td class="Level">ERROR</td>
+<td class="Date">2021-15-18 18:15:07.521</td>
+<td class="Logger">com.zaxxer.hikari.pool.HikariPool</td>
+<td class="MethodOfCaller">throwPoolInitializationException</td>
+<td class="LineOfCaller">594</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-4</td>
+<td class="Message">HikariPool-1 - Exception during pool initialization.</td>
+</tr>
+<tr><td class="Exception" colspan="6">com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:46c0a49c-8434-454c-94b4-0956b94027e5
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:283)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:129)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:37)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:5560)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4289)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7417)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3488)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2978)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2628)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2471)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1470)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:915)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy3/jdk.proxy3.$Proxy68.getMaxTime(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.service.IdexDataService.getIndexData(IdexDataService.java:15)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.controllor.IdexController.indexPage(IdexController.java:42)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.Thread.run(Thread.java:833)
+</td></tr>
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2021-15-18 18:15:07.727</td>
+<td class="Logger">org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]</td>
+<td class="MethodOfCaller">log</td>
+<td class="LineOfCaller">175</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-4</td>
+<td class="Message">Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:46c0a49c-8434-454c-94b4-0956b94027e5
+### The error may exist in com/example/demo/mapper/IndexDataMapper.java (best guess)
+### The error may involve com.example.demo.mapper.IndexDataMapper.getMaxTime
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:46c0a49c-8434-454c-94b4-0956b94027e5] with root cause</td>
+</tr>
+<tr><td class="Exception" colspan="6">com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:46c0a49c-8434-454c-94b4-0956b94027e5
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:283)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:129)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:37)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:5560)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4289)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7417)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3488)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2978)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2628)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2471)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1470)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:915)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy3/jdk.proxy3.$Proxy68.getMaxTime(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.service.IdexDataService.getIndexData(IdexDataService.java:15)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.controllor.IdexController.indexPage(IdexController.java:42)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.Thread.run(Thread.java:833)
+</td></tr></table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:16:28 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:16:30 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+
+<tr class="error even">
+<td class="Level">ERROR</td>
+<td class="Date">2021-16-18 18:16:37.945</td>
+<td class="Logger">com.zaxxer.hikari.pool.HikariPool</td>
+<td class="MethodOfCaller">throwPoolInitializationException</td>
+<td class="LineOfCaller">594</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-1</td>
+<td class="Message">HikariPool-1 - Exception during pool initialization.</td>
+</tr>
+<tr><td class="Exception" colspan="6">com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:e68f06b2-f82b-47fa-afba-6c3b8a49b6db
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:283)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:129)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:37)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:5560)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4289)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7417)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3488)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2978)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2628)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2471)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1470)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:915)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy3/jdk.proxy3.$Proxy68.getMaxTime(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.service.IdexDataService.getIndexData(IdexDataService.java:15)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.controllor.IdexController.indexPage(IdexController.java:42)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.Thread.run(Thread.java:833)
+</td></tr>
+<tr class="error odd">
+<td class="Level">ERROR</td>
+<td class="Date">2021-16-18 18:16:38.097</td>
+<td class="Logger">org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]</td>
+<td class="MethodOfCaller">log</td>
+<td class="LineOfCaller">175</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-1</td>
+<td class="Message">Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:e68f06b2-f82b-47fa-afba-6c3b8a49b6db
+### The error may exist in com/example/demo/mapper/IndexDataMapper.java (best guess)
+### The error may involve com.example.demo.mapper.IndexDataMapper.getMaxTime
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:e68f06b2-f82b-47fa-afba-6c3b8a49b6db] with root cause</td>
+</tr>
+<tr><td class="Exception" colspan="6">com.microsoft.sqlserver.jdbc.SQLServerException: 使用者 &#39;sa&#39; 的登入失敗。 ClientConnectionId:e68f06b2-f82b-47fa-afba-6c3b8a49b6db
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:265)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:283)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:129)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:37)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:5560)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:4289)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:4227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7417)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:3488)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2978)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2628)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2471)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1470)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:915)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy2/jdk.proxy2.$Proxy59.selectOne(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at jdk.proxy3/jdk.proxy3.$Proxy68.getMaxTime(Unknown Source)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.service.IdexDataService.getIndexData(IdexDataService.java:15)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at com.example.demo.controllor.IdexController.indexPage(IdexController.java:42)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;at java.base/java.lang.Thread.run(Thread.java:833)
+</td></tr></table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:20:55 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:20:56 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:25:12 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:25:16 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:27:45 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:27:48 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:33:22 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:33:24 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:42:50 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:42:51 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2021-43-18 18:43:25.555</td>
+<td class="Logger">org.apache.catalina.util.SessionIdGeneratorBase</td>
+<td class="MethodOfCaller">log</td>
+<td class="LineOfCaller">173</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-6</td>
+<td class="Message">Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [463] milliseconds.</td>
+</tr>
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:51:05 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:51:07 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+
+<tr class="warn even">
+<td class="Level">WARN</td>
+<td class="Date">2021-51-18 18:51:37.740</td>
+<td class="Logger">org.apache.catalina.util.SessionIdGeneratorBase</td>
+<td class="MethodOfCaller">log</td>
+<td class="LineOfCaller">173</td>
+<td class="Thread">http-nio-127.0.0.1-8080-exec-8</td>
+<td class="Message">Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [271] milliseconds.</td>
+</tr>
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:55:13 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Sat Dec 18 18:55:16 CST 2021</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Level">Level</td>
+<td class="Date">Date</td>
+<td class="Logger">Logger</td>
+<td class="MethodOfCaller">MethodOfCaller</td>
+<td class="LineOfCaller">LineOfCaller</td>
+<td class="Thread">Thread</td>
+<td class="Message">Message</td>
+</tr>
+
+</table>
+</body></html>

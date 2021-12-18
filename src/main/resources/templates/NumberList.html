@@ -22,11 +22,10 @@
             <!--            裡面-->
             <div class="m-4">
                 <h1>會員管理</h1>
-                <a href="/manage" class="mr-2">管理員後台</a><span>->>></span><span class="ml-2">會員管理
-                 <form method="post" action="/user/Delete">
+                <a href="/manage" class="mr-2">管理員後台</a><span>->>></span><span class="ml-2">會員管理</span>
+                 <form method="post" action="/user/Delete" onsubmit="return disp_confirm()">
                 <div class="m-4">
-                    <span><input type="button" class="btn-facebook" onclick="javascript:location.href='/UserInfo/goAdd'"
-                                 value="Add"></span>
+                    <span><input type="button" class="btn-facebook" onclick="javascript:location.href='/UserInfo/goAdd'" value="Add"></span>
                     <span><input type="submit" value="Del" class="btn-google"></span>
 
                 </div>
@@ -54,14 +53,17 @@
                             <td th:if="${UserInfo.getUserLevel()=='0'}">管理者</td>
                              <td th:if="${UserInfo.getUserLevel()=='1'}">一般會員</td>
                             <td th:text="${#dates.format(UserInfo.getCreateDate(),'yyyy-MM-dd HH:mm')}"></td>
-   <td><a th:href="@{/User/Act(UserInfoOnlyID=${UserInfo.getOnlyID()})}" >編輯</a></td>
+                             <td><a th:href="@{/User/Act(UserInfoOnlyID=${UserInfo.getOnlyID()})}" >編輯</a></td>
 
 
                         </tr>
                     </table>
+                </div>
                 </form>
+
+
                 <!--math-->
-                    <div>
+                <div>
                         <ul class="pagination">
                             <li class="page-item"><a class="page-link" href="/userInfoListPrevious">Previous</a></li>
 
@@ -74,11 +76,9 @@
                         </ul>
                     </div>
                 <!--math-->
-            </div>
 
-            <div class="m-4">
 
-            </div>
+
 
         </div>
 
@@ -101,7 +101,15 @@
 <link th:replace="common :: commonModel">
 
 <link th:replace="common :: commonJs">
-
+<script type="text/javascript">
+    function disp_confirm() {
+        if (confirm("確認要送出本表單嗎？") == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
 
 </body>
 
